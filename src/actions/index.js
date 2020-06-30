@@ -1,7 +1,9 @@
 import axios from "axios";
+import {DeviceUUID} from "device-uuid"
 
 //axios interceptors
 axios.interceptors.request.use(function (config) {
+    config.headers.deviceUUID = new DeviceUUID().get();
     console.log(config)
     return config;
 }, function (error) {
