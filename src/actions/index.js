@@ -4,14 +4,12 @@ import {DeviceUUID} from "device-uuid"
 //axios interceptors
 axios.interceptors.request.use(function (config) {
     config.headers.deviceUUID = new DeviceUUID().get();
-    console.log(config)
     return config;
 }, function (error) {
     return Promise.reject(error);
 });
 
 axios.interceptors.response.use(function (response) {
-    console.log(response)
     return response;
 }, function (error) {
     return Promise.reject(error);
