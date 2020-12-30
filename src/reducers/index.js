@@ -14,7 +14,7 @@ function rootReducer(state = initialState, action) {
             console.log(action);
             return {...state, something: action.payload};
         }
-        case "SETSTATE": {
+        case "SET": {
             return {...state, [action.key]: action.payload};
         }
         default:

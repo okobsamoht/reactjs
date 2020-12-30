@@ -23,7 +23,7 @@ export function getRemoteData() {
     return function (dispatch) {
         return axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(json => {
-                dispatch({type: "SETSTATE", key: 'remoteData', payload: json.data});
+                dispatch({type: "SET", key: 'remoteData', payload: json.data});
                 //window.location = 'https://google.com';
             });
     };

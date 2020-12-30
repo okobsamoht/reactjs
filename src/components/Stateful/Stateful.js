@@ -13,7 +13,7 @@ const Stateful = (props) => {
 
     useEffect(() => {
         setLocalState("Local State")
-        dispatch({type: "SETSTATE", key: 'sharedState', payload: "Shared State"});
+        dispatch({type: "SET", key: 'sharedState', payload: "Shared State"});
         dispatch(actions.getRemoteData())
     }, [])
 
@@ -26,7 +26,7 @@ const Stateful = (props) => {
         <hr/>
         <div>
             <div>internationalisation | {i18n.language}</div>
-            <div>{t('msg')}:</div>
+            <div>{t('msg',{lorem:'lorem ipsum'})}</div>
             <button onClick={()=>i18n.changeLanguage('fr')}>fr</button>
             <button onClick={()=>i18n.changeLanguage('en')}>en</button>
         </div>
