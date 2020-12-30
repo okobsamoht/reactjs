@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../logo.svg";
+import logo from "../../assets/logo.svg";
 import {Link} from "react-router-dom";
 import './Welcome.css'
 
@@ -9,9 +9,6 @@ const Welcome = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Welcome</p>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <a
             className="App-link"
             href="https://reactjs.org"
@@ -20,7 +17,8 @@ const Welcome = () => {
         >
           Learn React
         </a>
-        <Link className="App-link" to={'backdoor'}>Backdoor</Link>
+        <Link className={"App-link"} to={'stateful'}>Stateful Component</Link>
+        <Link className={"App-link"} to={'backdoor'}>Backdoor</Link>
       </header>
     </div>
   </div>;

@@ -16,17 +16,14 @@ axios.interceptors.response.use(function (response) {
 });
 
 //actions
-export function addArticle(payload) {
-    return {type: "ADD_ARTICLE", payload}
-}
 export function doSomething(payload) {
     return {type: "DO_SOMETHING", payload}
 }
-export function getData() {
+export function getRemoteData() {
     return function (dispatch) {
         return axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(json => {
-                dispatch({type: "DATA_LOADED", payload: json.data});
+                dispatch({type: "SETSTATE", key: 'remoteData', payload: json.data});
                 //window.location = 'https://google.com';
             });
     };

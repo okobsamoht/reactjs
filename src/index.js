@@ -5,9 +5,9 @@ import './index.css';
 import {Provider} from 'react-redux'
 import store from './store'
 import "./scripts/index";
-import './i18n';
+import './locales/i18n';
 
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

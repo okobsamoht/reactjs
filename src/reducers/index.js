@@ -1,6 +1,5 @@
 const initialState = {
-    articles: [],
-    remoteArticles: [],
+    sharedState: null,
 };
 
 function rootReducer(state = initialState, action) {
@@ -15,15 +14,8 @@ function rootReducer(state = initialState, action) {
             console.log(action);
             return {...state, something: action.payload};
         }
-        case "ADD_ARTICLE": {
-            return Object.assign({}, state, {
-                articles: state.articles.concat(action.payload)
-            });
-        }
-        case "DATA_LOADED": {
-            return Object.assign({}, state, {
-                remoteArticles: state.remoteArticles.concat(action.payload)
-            });
+        case "SETSTATE": {
+            return {...state, [action.key]: action.payload};
         }
         default:
             return state;

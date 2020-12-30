@@ -13,6 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
  - moment
  - react-toastify
  - device-uuid
+ - loadash
 
 ## Available Scripts
 
