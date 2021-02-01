@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector, shallowEqual} from "react-redux";
-import * as actions from "../../actions"
+import * as actions from "../../redux/actions"
 import {useTranslation} from "react-i18next";
 
 const Stateful = (props) => {
@@ -15,7 +15,12 @@ const Stateful = (props) => {
         setLocalState("Local State")
         dispatch({type: "SET", key: 'sharedState', payload: "Shared State"});
         dispatch(actions.getRemoteData())
+
+        // return () => {
+        //     console.log('component unmount');
+        // }
     }, [])
+
 
     return <section id={'Stateful'} className={'Stateful'}>
         <h2>Stateful Component</h2>
