@@ -35,6 +35,10 @@ const Stateful = (props) => {
             <button onClick={()=>i18n.changeLanguage('fr')}>fr</button>
             <button onClick={()=>i18n.changeLanguage('en')}>en</button>
         </div>
+        <hr/>
+        <button onClick={()=>dispatch({type:'foo',key:'foo',payload:'lorem'})}>foo</button>
+        <button onClick={()=>dispatch({type:'bar',key:'bar',payload:{id:3,label:'labl'}})}>bar</button>
+        <button onClick={()=>dispatch({type:'baz',key:'baz',payload:["r",4,[5,'r']]})}>baz</button>
     </section>;
 };
 
