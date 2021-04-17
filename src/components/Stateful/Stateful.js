@@ -31,6 +31,7 @@ const Stateful = (props) => {
         <div>{localState}</div>
         <div>{states.sharedState}</div>
         <div>{states.remoteData?.length}</div>
+        <div>{states.dispatch}</div>
 
         <hr/>
         <div>
@@ -40,7 +41,7 @@ const Stateful = (props) => {
             <button onClick={() => i18n.changeLanguage('en')}>en</button>
         </div>
         <hr/>
-        <button onClick={() => dispatch({type: 'DISPATCH', key: 'DISPATCH', payload: Math.random()})}>dispatch</button>
+        <button onClick={() => dispatch({type: 'DISPATCH', key: 'dispatch', payload: Math.random()})}>dispatch</button>
     </section>;
 };
 

@@ -6,6 +6,7 @@ const Backdoor = () => {
     <h2>Backdoor</h2>
     <div>
       {'React version: '+React.version}
+      <div>{JSON.stringify(process.env)}</div>
     </div>
   </div>;
 };
