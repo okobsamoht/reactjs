@@ -37,11 +37,11 @@ const Stateful = (props) => {
         <div>
             <div>internationalisation | {i18n.language}</div>
             <div>{t('msg', {lorem: 'lorem ipsum'})}</div>
-            <button onClick={() => i18n.changeLanguage('fr')}>fr</button>
-            <button onClick={() => i18n.changeLanguage('en')}>en</button>
+            <button class="button" onClick={() => i18n.changeLanguage('fr')}>fr</button>
+            <button class="button" onClick={() => i18n.changeLanguage('en')}>en</button>
         </div>
         <hr/>
-        <button onClick={() => dispatch({type: 'DISPATCH', key: 'dispatch', payload: Math.random()})}>dispatch</button>
+        <button class="button" onClick={() => dispatch({type: 'DISPATCH', key: 'dispatch', payload: Math.random()})}>dispatch</button>
     </section>;
 };
 
