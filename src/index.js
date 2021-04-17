@@ -10,10 +10,20 @@ import './locales/i18n';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
+import {Client as Styletron} from 'styletron-engine-atomic';
+import {Provider as StyletronProvider} from 'styletron-react';
+import {LightTheme, BaseProvider} from 'baseui';
+
+const engine = new Styletron();
+
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
-            <App/>
+            <StyletronProvider value={engine}>
+                <BaseProvider theme={LightTheme}>
+                    <App/>
+                </BaseProvider>
+            </StyletronProvider>
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
