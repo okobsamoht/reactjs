@@ -8,7 +8,7 @@ const Welcome = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome</p>
+        <p>welcome</p>
         <a
             className="App-link"
             href="https://reactjs.org"
