@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mantine/core": "^1.0.3",
+    "@mantine/hooks": "^1.0.3",
+    "@mantine/notifications": "^1.0.3",
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
@@ -19,6 +22,7 @@
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.15.1",
     "react-i18next": "^11.8.5",
+    "react-jss": "^10.6.0",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
