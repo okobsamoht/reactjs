@@ -14,9 +14,11 @@ i18n
     .init({
         resources,
         lng: "en",
-        react: {wait: true},
         keySeparator: false,
-        interpolation: {escapeValue: false}
+        interpolation: {escapeValue: false},
+        react: {
+            useSuspense: false,
+        },
     });
 
 export default i18n;
