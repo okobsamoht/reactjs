@@ -3,6 +3,7 @@ import "./Stateful.css"
 import {useDispatch, useSelector, shallowEqual} from "react-redux";
 import * as actions from "../../redux/actions"
 import {useTranslation} from "react-i18next";
+import {toast} from "react-toastify";
 
 const Stateful = (props) => {
 
@@ -12,6 +13,7 @@ const Stateful = (props) => {
 
     const [localState, setLocalState] = useState(null);
 
+    const notify = () => toast("Wow so easy!");
     useEffect(() => {
         console.log('component mounted');
         return () => {
@@ -40,6 +42,8 @@ const Stateful = (props) => {
             <button onClick={() => i18n.changeLanguage('fr')}>fr</button>
             <button onClick={() => i18n.changeLanguage('en')}>en</button>
         </div>
+        <hr/>
+        <button onClick={notify}>notify</button>
         <hr/>
         <button onClick={() => dispatch({type: 'DISPATCH', key: 'dispatch', payload: Math.random()})}>dispatch</button>
     </section>;

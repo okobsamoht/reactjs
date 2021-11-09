@@ -1,5 +1,6 @@
 import axios from "axios";
 import {DeviceUUID} from "device-uuid"
+import {toast} from "react-toastify";
 
 //axios interceptors
 axios.interceptors.request.use(function (config) {
@@ -24,6 +25,7 @@ export function getRemoteData() {
         return axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(json => {
                 dispatch({type: "SET", key: 'remoteData', payload: json.data});
+                toast("remote data fetched")
                 //window.location = 'https://google.com';
             });
     };
