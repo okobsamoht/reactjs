@@ -2,9 +2,8 @@ import React from 'react';
 import './App.css';
 import './App.scss';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route
+    BrowserRouter as Router,
+    Route, Routes
 } from "react-router-dom";
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -16,20 +15,12 @@ function App(props) {
   return (
       <div className={'AppShell'} id={'AppShell'}>
         <Router>
-          <Switch>
-            <Route exact path="/">
-              <Welcome/>
-            </Route>
-            <Route path="/backdoor">
-              <Backdoor/>
-            </Route>
-            <Route path="/stateful">
-              <Stateful/>
-            </Route>
-            <Route path="*">
-              404
-            </Route>
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<Welcome/>} />
+            <Route path="/backdoor" element={<Backdoor/>} />
+            <Route path="/stateful" element={<Stateful/>} />
+            <Route path="*" element={<div>404</div>} />
+          </Routes>
         </Router>
         <ToastContainer />
       </div>
