@@ -7,7 +7,7 @@ import {toast} from "react-toastify";
 
 const Stateful = (props) => {
 
-    const {t, i18n} = useTranslation();
+    const {i18n} = useTranslation();
     const dispatch = useDispatch();
     const states = useSelector(state => state, shallowEqual);
 
@@ -38,7 +38,8 @@ const Stateful = (props) => {
         <hr/>
         <div>
             <div>internationalisation | {i18n.language}</div>
-            <div>{t('msg', {lorem: 'lorem ipsum'})}</div>
+            <div>{i18n.t('msg', {lorem: 'lorem ipsum'})}</div>
+            <div>{i18n.t('untranslated')}</div>
             <button onClick={() => i18n.changeLanguage('fr')}>fr</button>
             <button onClick={() => i18n.changeLanguage('en')}>en</button>
         </div>

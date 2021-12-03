@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
 import store from './redux/store'
 import "./scripts/index";
-import './locales/i18n';
+import './i18n/i18n';
 
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
