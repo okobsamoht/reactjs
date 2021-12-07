@@ -19,6 +19,7 @@ const Welcome = () => {
         </a>
         <Link className={"App-link"} to={'stateful'}>Stateful Component</Link>
         <Link className={"App-link"} to={'backdoor'}>Backdoor</Link>
+        <Link className={"App-link"} to={'auth'}>Auth</Link>
       </header>
     </div>
   </div>;
