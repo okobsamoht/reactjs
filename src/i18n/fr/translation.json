@@ -1,4 +1,4 @@
 {
-  "lang": "langue",
-  "msg": "ceci est un message en français avec {{lorem}}."
+    "lang": "langue",
+    "msg": "ceci est un message en français avec {{lorem}}."
 }
